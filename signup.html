@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Portal - Sign Up</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="logo.svg" alt="Student Portal Logo" height="30" class="d-inline-block align-top me-2">Student Portal</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5 mb-5" style="min-height: calc(100vh - 300px);">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow">
+          <div class="card-body p-4">
+            <h2 class="text-center mb-4" style="color: #002366;">Sign Up</h2>
+            <form id="signupForm" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+                <div class="invalid-feedback">
+                  Please enter your full name.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+                <div class="invalid-feedback">
+                  Please enter a password.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" required>
+                <div class="invalid-feedback">
+                  Passwords must match.
+                </div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary" style="background-color: #002366; border-color: #002366;">Sign Up</button>
+              </div>
+              <div class="mt-3 text-center">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Student Portal</h5>
+          <p>
+            Your one-stop platform for academic management.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="index.html" class="text-white">Home</a>
+            </li>
+            <li>
+              <a href="dashboard.html" class="text-white">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2025 Student Portal
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      'use strict'
+
+      var form = document.getElementById('signupForm')
+      var password = document.getElementById('password')
+      var confirmPassword = document.getElementById('confirmPassword')
+
+      function validatePassword() {
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.setCustomValidity("Passwords must match")
+        } else {
+          confirmPassword.setCustomValidity('')
+        }
+      }
+
+      password.onchange = validatePassword
+      confirmPassword.onkeyup = validatePassword
+
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+          form.classList.add('was-validated')
+          return
+        }
+        
+        alert('Signup successful! Redirecting to login...')
+        window.location.href = 'login.html'
+      }, false)
+    })()
+  </script>
+</body>
+
+</html>

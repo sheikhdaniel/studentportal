@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grades - Student Portal</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="logo.svg" alt="Student Portal Logo" height="30" class="d-inline-block align-top me-2">Student Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="grades.html">Grades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4 mb-5" style="min-height: calc(100vh - 300px);">
+    <h1>My Grades</h1>
+    
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5>Semester Summary</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between">
+              <span>GPA:</span>
+              <span class="fw-bold">3.75</span>
+            </div>
+            <div class="progress mt-2">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 93.75%" aria-valuenow="93.75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between">
+              <span>Credits:</span>
+              <span class="fw-bold">15</span>
+            </div>
+            <div class="progress mt-2">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between">
+              <span>Completion:</span>
+              <span class="fw-bold">100%</span>
+            </div>
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="gradesAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="true" aria-controls="course1">
+            <div class="d-flex justify-content-between w-100">
+              <span>Database Systems (CS401)</span>
+              <span class="badge bg-success">A</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course1" class="accordion-collapse collapse show" data-bs-parent="#gradesAccordion">
+          <div class="accordion-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midterm Exam</td>
+                  <td>30%</td>
+                  <td>90/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Essays</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Project</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course2" aria-expanded="false" aria-controls="course2">
+            <div class="d-flex justify-content-between w-100">
+              <span>Web Development (CS402)</span>
+              <span class="badge bg-success">A-</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course2" class="accordion-collapse collapse" data-bs-parent="#gradesAccordion">
+          <div class="accordion-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midterm Project</td>
+                  <td>25%</td>
+                  <td>90/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Project</td>
+                  <td>35%</td>
+                  <td>85/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Weekly Labs</td>
+                  <td>40%</td>
+                  <td>92/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course3" aria-expanded="false" aria-controls="course3">
+            <div class="d-flex justify-content-between w-100">
+              <span>Data Structures (CS403)</span>
+              <span class="badge bg-success">A-</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course3" class="accordion-collapse collapse" data-bs-parent="#gradesAccordion">
+          <div class="accordion-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midterm Exam</td>
+                  <td>30%</td>
+                  <td>90/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Essays</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Quizzes</td>
+                  <td>30%</td>
+                  <td>82/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>78/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Programming Assignments</td>
+                  <td>30%</td>
+                  <td>85/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course4" aria-expanded="false" aria-controls="course4">
+            <div class="d-flex justify-content-between w-100">
+              <span>Data Structures (CS403)</span>
+              <span class="badge bg-success">A</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course4" class="accordion-collapse collapse" data-bs-parent="#gradesAccordion">
+          <div class="accordion-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midterm Exam</td>
+                  <td>30%</td>
+                  <td>90/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Essays</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Programming Assignments</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course5" aria-expanded="false" aria-controls="course5">
+            <div class="d-flex justify-content-between w-100">
+              <span>Software Engineering (CS404)</span>
+              <span class="badge bg-success">A</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course5" class="accordion-collapse collapse" data-bs-parent="#gradesAccordion">
+          <div class="accordion-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midterm Exam</td>
+                  <td>30%</td>
+                  <td>90/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Essays</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Quizzes</td>
+                  <td>30%</td>
+                  <td>78/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Project</td>
+                  <td>40%</td>
+                  <td>82/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Case Studies</td>
+                  <td>30%</td>
+                  <td>75/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course6" aria-expanded="false" aria-controls="course6">
+            <div class="d-flex justify-content-between w-100">
+              <span>Language and Communication (LCC501)</span>
+              <span class="badge bg-primary">B</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course6" class="accordion-collapse collapse" data-bs-parent="#gradesAccordion">
+          <div class="accordion-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Weight</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Midterm Exam</td>
+                  <td>30%</td>
+                  <td>90/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+                <tr>
+                  <td>Final Exam</td>
+                  <td>40%</td>
+                  <td>88/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+
+                <tr>
+                  <td>Essays</td>
+                  <td>30%</td>
+                  <td>95/100</td>
+                  <td><span class="badge bg-success">Graded</span></td>
+                </tr>
+    
+
+    
+
+    
+
+    
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+</body>
+</html>

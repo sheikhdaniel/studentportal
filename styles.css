@@ -1,0 +1,32 @@
+footer.bg-light {
+  background-color: #002366 !important;
+  color: white !important;
+  padding: 1rem 0 !important;
+  font-size: 0.9rem !important;
+  margin-top: 1rem !important;
+}
+
+footer.bg-light a {
+  color: white !important;
+}
+
+footer.bg-light a:hover {
+  color: #FFD700 !important;
+}
+
+nav {
+  background-color: #002366;
+  color: white;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #FFFFFF !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #FFD700 !important;
+}

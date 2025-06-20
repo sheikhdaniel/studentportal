@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses - Student Portal</title>
+  <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="logo.svg" alt="Student Portal Logo" height="30" class="d-inline-block align-top me-2">Student Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="grades.html">Grades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <div class="container mt-4 mb-5" style="min-height: calc(100vh - 300px);">
+    <h1>My Courses</h1>
+    
+    <div class="accordion" id="coursesAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#course1" aria-expanded="true" aria-controls="course1">
+            <div class="d-flex justify-content-between w-100">
+              <span>Database Systems (CS401)</span>
+              <span class="badge bg-primary">3 Credits</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course1" class="accordion-collapse collapse show" data-bs-parent="#coursesAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Instructor:</strong> Dr. Smith</p>
+                <p><strong>Schedule:</strong> Mon/Wed 10:00-11:30</p>
+                <p><strong>Location:</strong> CS Building 203</p>
+              </div>
+              <div class="col-md-6">
+                <h5>Syllabus</h5>
+                <ul>
+                  <li>Relational Database Design</li>
+                  <li>SQL Programming</li>
+                  <li>Database Administration</li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Materials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course2" aria-expanded="false" aria-controls="course2">
+            <div class="d-flex justify-content-between w-100">
+              <span>Web Development (CS402)</span>
+              <span class="badge bg-primary">4 Credits</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course2" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Instructor:</strong> Prof. Johnson</p>
+                <p><strong>Schedule:</strong> Tue/Thu 1:00-2:30</p>
+                <p><strong>Location:</strong> CS Building 105</p>
+              </div>
+              <div class="col-md-6">
+                <h5>Syllabus</h5>
+                <ul>
+                  <li>HTML/CSS Fundamentals</li>
+                  <li>JavaScript Programming</li>
+                  <li>React Framework</li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Materials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course3" aria-expanded="false" aria-controls="course3">
+            <div class="d-flex justify-content-between w-100">
+              <span>Data Structures (CS403)</span>
+              <span class="badge bg-primary">3 Credits</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course3" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Instructor:</strong> Dr. Williams</p>
+                <p><strong>Schedule:</strong> Fri 9:00-12:00</p>
+                <p><strong>Location:</strong> CS Building 301</p>
+              </div>
+              <div class="col-md-6">
+                <h5>Syllabus</h5>
+                <ul>
+                  <li>Arrays and Linked Lists</li>
+                  <li>Trees and Graphs</li>
+                  <li>Algorithm Analysis</li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Materials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course4" aria-expanded="false" aria-controls="course4">
+            <div class="d-flex justify-content-between w-100">
+              <span>User Experience Design (IMS564)</span>
+              <span class="badge bg-primary">3 Credits</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course4" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Instructor:</strong> Prof. Anderson</p>
+                <p><strong>Schedule:</strong> Mon/Wed 2:00-3:30</p>
+                <p><strong>Location:</strong> Design Building 101</p>
+              </div>
+              <div class="col-md-6">
+                <h5>Syllabus</h5>
+                <ul>
+                  <li>UX Research Methods</li>
+                  <li>Wireframing and Prototyping</li>
+                  <li>Usability Testing</li>
+                  <li>Interaction Design Principles</li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Materials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#course5" aria-expanded="false" aria-controls="course5">
+            <div class="d-flex justify-content-between w-100">
+              <span>English for Professional Correspondence (LCC501)</span>
+              <span class="badge bg-primary">2 Credits</span>
+            </div>
+          </button>
+        </h2>
+        <div id="course5" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-md-6">
+                <p><strong>Instructor:</strong> Dr. Roberts</p>
+                <p><strong>Schedule:</strong> Tue/Thu 10:00-11:00</p>
+                <p><strong>Location:</strong> Language Center 205</p>
+              </div>
+              <div class="col-md-6">
+                <h5>Syllabus</h5>
+                <ul>
+                  <li>Business Email Writing</li>
+                  <li>Professional Report Writing</li>
+                  <li>Meeting Minutes</li>
+                  <li>Presentation Skills</li>
+                </ul>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Materials</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    
+    <div class="mt-4">
+      <h3>Register for New Courses</h3>
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary">Spring 2025 Courses</button>
+            <button class="btn btn-outline-primary">Summer 2025 Courses</button>
+            <button class="btn btn-outline-primary">Fall 2025 Courses</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Student Portal</h5>
+          <p>
+            A comprehensive platform for students to manage their academic journey.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" class="text-dark">Home</a></li>
+            <li><a href="dashboard.html" class="text-dark">Dashboard</a></li>
+            <li><a href="courses.html" class="text-dark">Courses</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contact</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#!" class="text-dark">Help Center</a></li>
+            <li><a href="#!" class="text-dark">Feedback</a></li>
+          </ul>
+        </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2025 Copyright: <a class="text-dark" href="index.html">StudentPortal.com</a>
+    </div>
+  </footer>
+</body>
+
+</html>
